@@ -15,6 +15,7 @@ import { sidebarLinks } from "@/constants" // Importamos una lista de enlaces qu
 import { cn } from "@/lib/utils" // Importamos una función utilitaria que permite combinar clases CSS dinámicamente.
 import { usePathname } from 'next/navigation' // Importamos un hook de Next.js para obtener la URL actual.
 import { SheetClose } from "@/components/ui/sheet" // Componente que permite cerrar la hoja lateral cuando se hace clic en un enlace.
+import Footer from "./Footer"
 
 const MobileNav = ({ user }: MobileNavProps) => {
     const pathname = usePathname(); // Obtiene la ruta actual de la página para resaltar el enlace activo.
@@ -78,7 +79,7 @@ const MobileNav = ({ user }: MobileNavProps) => {
                             </nav>
                         </SheetClose>
                         {/* Sección para un pie de página dentro del menú */}
-                        FOOTER
+                        <Footer user={user} type="mobile" />
                     </div>
                 </SheetContent>
             </Sheet>

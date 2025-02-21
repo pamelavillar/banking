@@ -6,4 +6,4 @@ const Transfer = () => {
   )
 }
 
-export default Transfer 
+export default Transfer
